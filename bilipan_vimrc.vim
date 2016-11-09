@@ -21,8 +21,8 @@ set noundofile
 " Change to directory where current file exists automatically
 set autochdir
 
-
 """"""""""""""""""""""""""""""""""""" File encoding """"""""""""""""""""""""""""""""""""""""
+
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,chinese
 if has('win32')
@@ -41,8 +41,8 @@ language messages zh_CN.UTF-8
 
 " Set shellcmdflag=-c
 
+""""""""""""""""""""""""""""""""" Window & Tab styles """"""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""" Window & Tab styles """"""""""""""""""""""""""""""""""""""""""
 set go=
 " Show position
 set ruler
@@ -50,7 +50,7 @@ set ruler
 " If not, set showtabline=1
 set showtabline=2
 
-set lines=35 columns=120
+set lines=45 columns=145
 colo srcery
 " Set guifont=Menlo:h11
 set guifont=Consolas:h9:cEASTEUROPE
@@ -69,9 +69,8 @@ set incsearch
 " Highlight current row
 set cursorline
 
-
-
 """""""""""""""""""""""""""""""""""" Bundle Plugins """""""""""""""""""""""""""""""""""""
+
 " Vim plugins manager--bundle
 set nocompatible              " be iMproved
 filetype off                  " required!
@@ -93,6 +92,7 @@ Bundle 'spolu/dwm.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'ryanpcmcquen/true-monochrome_vim'
 Bundle 'thinca/vim-fontzoom'
+Bundle 'junegunn/goyo.vim'
 " original repos on GitHub
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
@@ -107,7 +107,6 @@ Bundle 'git://git.wincent.com/command-t.git'
 " ...
 
 filetype plugin indent on     " required!
-"
 " Brief help
 " :BundleList          - list configured bundles
 " :BundleInstall(!)    - install (update) bundles
@@ -116,10 +115,9 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
-""""""""""""""""""""""""""""
 
+"""""""""""""""""""""""""""""""""""" Mapping """""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""" Mapping """""""""""""""""""""""""""""""""""""""""""""""""
 " set iabbrev
 " iab sea define(function(require, exports, module) {<return>});<esc>O<c-d>
 " iab todo // @TODO:<esc><c-d>a
@@ -145,3 +143,6 @@ nnoremap <A-up> <Esc><C-w>k
 nnoremap <A-down> <Esc><C-w>j
 " Remove all empty lines
 nnoremap <F2> :g/^\s*$/d<CR>
+" Eneter distraction mode
+nnoremap <F9> :Goyo<CR>
+
