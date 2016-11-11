@@ -51,7 +51,9 @@ set ruler
 set showtabline=2
 
 set lines=45 columns=145
-colo srcery
+"colo srcery
+"colo base16-atelierforest
+colo soda
 " Set guifont=Menlo:h11
 set guifont=Consolas:h9:cEASTEUROPE
 set tabstop=4
@@ -82,22 +84,34 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 " User bundles
+" 文件树
 Bundle 'scrooloose/nerdtree'
+" 注释
 Bundle 'scrooloose/nerdcommenter'
+" 快速 html coding
 Bundle 'mattn/emmet-vim'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" 插件优化
 Bundle 'xolox/vim-misc'
+" 主题切换
 Bundle 'xolox/vim-colorscheme-switcher'
+" 任务管理
 Bundle 'aaronbieber/vim-quicktask'
-Bundle 'spolu/dwm.vim'
+" 窗口管理
+"Bundle 'spolu/dwm.vim'
+" 垂直缩进对齐线
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'ryanpcmcquen/true-monochrome_vim'
+" 字体大小切换
 Bundle 'thinca/vim-fontzoom'
+" 防分心窗口
 Bundle 'junegunn/goyo.vim'
 " original repos on GitHub
+" Git
 Bundle 'tpope/vim-fugitive'
+" 快速跳转
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
+" Ruby
+"Bundle 'tpope/vim-rails.git'
 " vim-scripts repos
 Bundle 'L9'
 " non-GitHub repos
@@ -115,6 +129,18 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
+"
+"
+"""""""""""""""""""""""""""""""""""" Themes """"""""""""""""""""""""""""""""""""""""""
+Bundle 'ryanpcmcquen/true-monochrome_vim'
+Bundle 'roosta/vim-srcery'
+Bundle 'GGalizzi/cake-vim'
+Bundle 'vim-scripts/proton'
+Bundle 'DAddYE/soda.vim'
+Bundle 'nice/sweater'
+Bundle 'romainl/flattened'
+Bundle 'acarapetis/vim-colors-github'
+Bundle 'atelierbram/vim-colors_atelier-schemes'
 
 """""""""""""""""""""""""""""""""""" Mapping """""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -132,7 +158,7 @@ nnoremap <A-r> <Esc>:set go=r<CR>
 " Close all visible menu
 nnoremap <A-R> <Esc>:set go=<CR>
 " CD to folder where current editting file located: ,,
-nnoremap <silent> <leader>, :cd %:p:h<CR>
+" nnoremap <silent> <leader>, :cd %:p:h<CR>
 " Change tabs
 nnoremap <A-j> gT
 nnoremap <A-k> gt
@@ -145,4 +171,3 @@ nnoremap <A-down> <Esc><C-w>j
 nnoremap <F2> :g/^\s*$/d<CR>
 " Eneter distraction mode
 nnoremap <F9> :Goyo<CR>
-
