@@ -50,10 +50,9 @@ set ruler
 " If not, set showtabline=1
 set showtabline=2
 
-set lines=45 columns=145
-"colo srcery
+set lines=40 columns=125
+colo base16-atelierestuary
 "colo base16-atelierforest
-colo soda
 " Set guifont=Menlo:h11
 set guifont=Consolas:h9:cEASTEUROPE
 set tabstop=4
@@ -83,6 +82,19 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+
+"""""""""""""""""""""""""""""""""""" Themes """"""""""""""""""""""""""""""""""""""""""
+
+Bundle 'ryanpcmcquen/true-monochrome_vim'
+Bundle 'roosta/vim-srcery'
+Bundle 'GGalizzi/cake-vim'
+Bundle 'vim-scripts/proton'
+Bundle 'DAddYE/soda.vim'
+Bundle 'nice/sweater'
+Bundle 'romainl/flattened'
+Bundle 'acarapetis/vim-colors-github'
+Bundle 'atelierbram/vim-colors_atelier-schemes'
+
 " User bundles
 " 文件树
 Bundle 'scrooloose/nerdtree'
@@ -97,8 +109,6 @@ Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-colorscheme-switcher'
 " 任务管理
 Bundle 'aaronbieber/vim-quicktask'
-" 窗口管理
-"Bundle 'spolu/dwm.vim'
 " 垂直缩进对齐线
 Bundle 'nathanaelkane/vim-indent-guides'
 " 字体大小切换
@@ -110,8 +120,6 @@ Bundle 'junegunn/goyo.vim'
 Bundle 'tpope/vim-fugitive'
 " 快速跳转
 Bundle 'Lokaltog/vim-easymotion'
-" Ruby
-"Bundle 'tpope/vim-rails.git'
 " vim-scripts repos
 Bundle 'L9'
 " non-GitHub repos
@@ -129,18 +137,7 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
-"
-"
-"""""""""""""""""""""""""""""""""""" Themes """"""""""""""""""""""""""""""""""""""""""
-Bundle 'ryanpcmcquen/true-monochrome_vim'
-Bundle 'roosta/vim-srcery'
-Bundle 'GGalizzi/cake-vim'
-Bundle 'vim-scripts/proton'
-Bundle 'DAddYE/soda.vim'
-Bundle 'nice/sweater'
-Bundle 'romainl/flattened'
-Bundle 'acarapetis/vim-colors-github'
-Bundle 'atelierbram/vim-colors_atelier-schemes'
+
 
 """""""""""""""""""""""""""""""""""" Mapping """""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -160,8 +157,8 @@ nnoremap <A-R> <Esc>:set go=<CR>
 " CD to folder where current editting file located: ,,
 " nnoremap <silent> <leader>, :cd %:p:h<CR>
 " Change tabs
-nnoremap <A-j> gT
-nnoremap <A-k> gt
+nnoremap <A-j> gt
+nnoremap <A-k> gT
 "Jump windows
 nnoremap <A-left> <Esc><C-w>h
 nnoremap <A-right> <Esc><C-w>l
