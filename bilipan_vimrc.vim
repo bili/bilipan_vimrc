@@ -51,8 +51,7 @@ set ruler
 set showtabline=2
 
 set lines=40 columns=125
-colo base16-atelierestuary
-"colo base16-atelierforest
+colo japanesque
 " Set guifont=Menlo:h11
 set guifont=Consolas:h9:cEASTEUROPE
 set tabstop=4
@@ -115,11 +114,20 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'thinca/vim-fontzoom'
 " 防分心窗口
 Bundle 'junegunn/goyo.vim'
+Goyo 120x80%
 " original repos on GitHub
 " Git
 Bundle 'tpope/vim-fugitive'
 " 快速跳转
 Bundle 'Lokaltog/vim-easymotion'
+" markdown instant preview
+Bundle 'iamcco/markdown-preview.vim'
+let g:mkdp_path_to_chrome = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+let g:mkdp_auto_start = 0
+let g:mkdp_auto_open = 0
+let g:mkdp_auto_close = 1
+let g:mkdp_refresh_slow = 0
+let g:mkdp_command_for_global = 0
 " vim-scripts repos
 Bundle 'L9'
 " non-GitHub repos
@@ -168,3 +176,5 @@ nnoremap <A-down> <Esc><C-w>j
 nnoremap <F2> :g/^\s*$/d<CR>
 " Eneter distraction mode
 nnoremap <F9> :Goyo<CR>
+nmap <silent> <F10> <Plug>MarkdownPreview
+nmap <silent> <S-F10> <Plug>StopMarkdownPreview
